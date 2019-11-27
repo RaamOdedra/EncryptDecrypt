@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +11,71 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EncryptDecrypt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asB-1q-4xS">
+                                <rect key="frame" x="30" y="503" width="354" height="30"/>
+                                <state key="normal" title="Decrypt"/>
+                                <connections>
+                                    <action selector="btnDecryptClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d0I-et-rxo"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="{&quot;name&quot;:&quot;hello&quot;}" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zth-RD-VZw">
+                                <rect key="frame" x="30" y="203" width="354" height="100"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="fyf-wJ-yRe"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="NteHWmaXoWf7WxavYoNjecDQR8AV1DstmeZslhUDBo4=" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OVD-l1-smP">
+                                <rect key="frame" x="30" y="383" width="354" height="100"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="zcS-Dy-dyz"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOh-CP-8W8">
+                                <rect key="frame" x="30" y="323" width="354" height="30"/>
+                                <state key="normal" title="Encrypt"/>
+                                <connections>
+                                    <action selector="btnEncryptClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sLW-tB-Pkk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="asB-1q-4xS" firstAttribute="leading" secondItem="OVD-l1-smP" secondAttribute="leading" id="4BN-2Y-yf9"/>
+                            <constraint firstItem="OVD-l1-smP" firstAttribute="trailing" secondItem="NOh-CP-8W8" secondAttribute="trailing" id="6q6-H2-KxX"/>
+                            <constraint firstItem="NOh-CP-8W8" firstAttribute="trailing" secondItem="zth-RD-VZw" secondAttribute="trailing" id="Mhb-gu-S5w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zth-RD-VZw" secondAttribute="trailing" constant="30" id="OHA-Bn-Xbm"/>
+                            <constraint firstItem="NOh-CP-8W8" firstAttribute="leading" secondItem="zth-RD-VZw" secondAttribute="leading" id="XA4-IX-zxg"/>
+                            <constraint firstItem="zth-RD-VZw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="bPr-2H-exM"/>
+                            <constraint firstItem="asB-1q-4xS" firstAttribute="trailing" secondItem="OVD-l1-smP" secondAttribute="trailing" id="hS5-vt-mES"/>
+                            <constraint firstItem="zth-RD-VZw" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-200" id="hgM-sM-DIl"/>
+                            <constraint firstItem="OVD-l1-smP" firstAttribute="leading" secondItem="NOh-CP-8W8" secondAttribute="leading" id="j7X-qa-Z0l"/>
+                            <constraint firstItem="OVD-l1-smP" firstAttribute="top" secondItem="NOh-CP-8W8" secondAttribute="bottom" constant="30" id="ooi-BI-bAk"/>
+                            <constraint firstItem="NOh-CP-8W8" firstAttribute="top" secondItem="zth-RD-VZw" secondAttribute="bottom" constant="20" id="saW-yt-q0j"/>
+                            <constraint firstItem="asB-1q-4xS" firstAttribute="top" secondItem="OVD-l1-smP" secondAttribute="bottom" constant="20" id="uWd-T1-CCX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="txtDecrypt" destination="OVD-l1-smP" id="Kir-y7-pgg"/>
+                        <outlet property="txtEncrypt" destination="zth-RD-VZw" id="cS5-hR-wza"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="133" y="96"/>
         </scene>
     </scenes>
 </document>
